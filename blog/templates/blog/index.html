@@ -1,9 +1,51 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
 My Blog
 {% endblock %}
 
+{% block css_files %}
+<link rel="stylesheet" type="text/css" href="{% static "/blog/index.css" %}">
+{%endblock %}
+
 {% block content %}
-<h1>Welcome to my blog!</h1>
+<header id="main-navigation">
+    <h1><a href="">Florin's Blog</a></h1>
+    <nav>
+        <a href="">All Posts</a>
+    </nav>
+</header>
+
+<section id="welcome">
+    <header>
+        <img src="" alt="Florin - The Author Of This Blog"/>
+        <h2>Florin's Blog</h2>
+    </header>
+    <p>Hi, I am Florin and I love to blog about tech and personal development!</p>
+</section>
+
+<section id="latest-posts">
+    <h2>My Latest Thoughts</h2>
+
+    <ul>
+        <li>
+            <article class="posts">
+                <a href="">
+                    <img src="" alt="Mountain Hiking"/>
+                    <div class="post__content">
+                        <h3>Mountain Hiking</h3>
+                        <p>TExt text text text text text text</p>
+                    </div>
+                </a>
+            </article>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>What I Do</h2>
+    <p>I love programming and I enjoy exploring new technologies.</p>
+    <p>My goal is to keep on growing as a developer.</p>
+</section>
 {% endblock %}
